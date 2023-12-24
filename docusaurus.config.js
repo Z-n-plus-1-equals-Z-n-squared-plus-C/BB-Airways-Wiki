@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'BB Airways Wiki',
+  tagline: 'Airplanes are cool. Thinking of putting a threejs interactive canvas here. Fly a plane 2d side scroller by a bunch of word towers that are generated from the wiki.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -20,8 +20,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Z-n-plus-1-equals-Z-n-squared-plus-C', // Usually your GitHub org/user name.
+  projectName: 'BB Airways', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -42,16 +42,19 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
+          routeBasePath: 'docs',
+          path: 'docs',
+          lastVersion: 'current',
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Z-n-plus-1-equals-Z-n-squared-plus-C/BB-Airways-Wiki',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Z-n-plus-1-equals-Z-n-squared-plus-C/BB-Airways-Wiki',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -60,16 +63,39 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bounties',
+        path: 'bounties',
+        routeBasePath: 'bounties',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'development',
+        path: 'development',
+        routeBasePath: 'development',
+        sidebarPath: './sidebars.js',
+        // ... other options
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/BB-Airways-Image-wiki.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'BB Airways Wiki',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -78,14 +104,20 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {to: '/development/intro', label: 'Development', position: 'left'},
+          {to: '/bounties/intro', label: 'Bounties', position: 'left'},
+          {to: '/styleGuide/intro', label: 'Style Guide', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Z-n-plus-1-equals-Z-n-squared-plus-C/BB-Airways-Wiki',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
+
+      
+
       footer: {
         style: 'dark',
         links: [
@@ -99,21 +131,21 @@ const config = {
             ],
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
+            // title: 'Community',
+            // items: [
+            //   {
+            //     label: 'Stack Overflow',
+            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            //   },
+            //   {
+            //     label: 'Discord',
+            //     href: 'https://discordapp.com/invite/docusaurus',
+            //   },
+            //   {
+            //     label: 'Twitter',
+            //     href: 'https://twitter.com/docusaurus',
+            //   },
+            // ],
           },
           {
             title: 'More',
@@ -123,13 +155,17 @@ const config = {
                 to: '/blog',
               },
               {
+                label: 'Blog',
+                to: '/bounties',
+              },
+              {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Z-n-plus-1-equals-Z-n-squared-plus-C/BB-Airways-Wiki',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Z-n-plus-1-equals-Z-n-squared-plus-C. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
