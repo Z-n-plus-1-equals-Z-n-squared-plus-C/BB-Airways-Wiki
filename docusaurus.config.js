@@ -102,11 +102,10 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Overview',
           },
           {to: '/development/intro', label: 'Development', position: 'left'},
           {to: '/bounties/intro', label: 'Bounties', position: 'left'},
-          {to: '/styleGuide/intro', label: 'Style Guide', position: 'left'},
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/Z-n-plus-1-equals-Z-n-squared-plus-C/BB-Airways-Wiki',
